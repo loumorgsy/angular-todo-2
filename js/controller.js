@@ -5,7 +5,7 @@ angular.module('RouteControllers', [])
     .controller('RegisterController', function($scope, UserAPIService) {
 
       $scope.registrationUser = {};
-
+      var URL = "http://morning-castle-91468.herokuapp.com/"
       $scope.submitForm = function() {
         if($scope.registrationForm.$valid) {
           $scope.registrationUser.username = $scope.user.username;
@@ -18,10 +18,12 @@ angular.module('RouteControllers', [])
           }).catch(function(err) {
             alert("Oops! Something went wrong!");
             console.log(err);
+
+
           });
         }
 
-        
+
       }
 
     });
