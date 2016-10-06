@@ -1,4 +1,4 @@
-angular.module('ToDoApp', ['ngRoute', 'RouteControllers', 'UserService']);
+angular.module('ToDoApp', ['ngRoute', 'RouteControllers', 'UserService', 'angular-storage', 'TodoService']);
 
 angular.module('ToDoApp').config(function($routeProvider) {
 
@@ -9,6 +9,10 @@ angular.module('ToDoApp').config(function($routeProvider) {
   .when('/accounts/register', {
     templateUrl: 'templates/register.html',
     controller: 'RegisterController'
+  })
+  .when('/todo', {
+    templateUrl: 'templates/todo.html',
+    controller: 'TodoController'
   });
 
 });
